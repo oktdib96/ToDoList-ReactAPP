@@ -28,6 +28,11 @@ class App extends Component {
       tasks: tasks,
     });
   };
+  handleRemoveAllTasks = () => {
+    this.setState({
+      tasks: [],
+    });
+  };
   handleShowPopup = () => {
     this.setState({
       active: !this.state.active,
@@ -65,7 +70,9 @@ class App extends Component {
           <StyledButton onClick={() => this.handleShowPopup()}>
             Dodaj zadanie
           </StyledButton>
-          <StyledButton primary>Usuń wszystko</StyledButton>
+          <StyledButton primary onClick={this.handleRemoveAllTasks}>
+            Usuń wszystko
+          </StyledButton>
         </div>
         {this.state.active ? (
           <AddTaskPopup
