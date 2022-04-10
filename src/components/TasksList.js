@@ -1,17 +1,9 @@
-const TasksList = () => {
-  return (
-    <ul>
-      <li>
-        <p>jeden zadanie</p>
-      </li>
-      <li>
-        <p>dawa zadanie lorem</p>
-      </li>
-      <li>
-        <p>lorem ipsum dolor</p>
-      </li>
-    </ul>
-  );
+import Item from "./Item";
+const TasksList = (props) => {
+  const Task = props.tasks.map((task) => (
+    <Item key={task.id} content={task.text} date={task.date} />
+  ));
+  return <ul>{Task}</ul>;
 };
 
 export default TasksList;

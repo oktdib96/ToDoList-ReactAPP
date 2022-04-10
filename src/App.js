@@ -6,18 +6,13 @@ import { StyledButton } from "./components/StyledButton";
 
 class App extends Component {
   state = {
-    tasks: [
-      {
-        text: "Zadanie1",
-        date: "01.01.2023",
-      },
-    ],
+    tasks: [{ id: 1, text: "Zadanie1", date: "01.01.2023" }],
   };
   render() {
     return (
       <div className="app">
         <Header />
-        <TasksList />
+        <TasksList tasks={this.state.tasks} />
         <StyledButton>Dodaj zadanie</StyledButton>
         <StyledButton primary>Usuń wszystko</StyledButton>
       </div>
