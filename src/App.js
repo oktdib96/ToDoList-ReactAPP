@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import TasksList from "./components/TasksList";
 import Header from "./components/Header";
+import AddTaskPopup from "./components/AddTaskPopup";
 import "./css/App.css";
 import { StyledButton } from "./components/StyledButton";
 
 class App extends Component {
   state = {
+    active: false,
     tasks: [
       {
         id: 1,
@@ -24,14 +26,29 @@ class App extends Component {
       tasks: tasks,
     });
   };
+  handleShowPopup = () => {
+    this.setState({
+      active: !this.state.active,
+    });
+  };
   render() {
     return (
-      <div className="app">
-        <Header />
-        <TasksList remove={this.handleRemoveTask} tasks={this.state.tasks} />
-        <StyledButton>Dodaj zadanie</StyledButton>
-        <StyledButton primary>Usuń wszystko</StyledButton>
-      </div>
+      <>
+        <div
+          className="app"
+          style={this.state.active ? { filter: "blur(10px)" } : null}
+        >
+          <Header />
+          <TasksList remove={this.handleRemoveTask} tasks={this.state.tasks} />
+          <StyledButton onClick={() => this.handleShowPopup()}>
+            Dodaj zadanie
+          </StyledButton>
+          <StyledButton primary>Usuń wszystko</StyledButton>
+        </div>
+        {this.state.active ? (
+          <AddTaskPopup popup={this.handleShowPopup} />
+        ) : null}
+      </>
     );
   }
 }

@@ -41,4 +41,22 @@
     margin-top: 10px;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     display: block;
+    color: rgba(240, 18, 18, 0.589);
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    border: 2px solid white;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    background-color:rgba(25, 39, 39, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+ .close:hover {
+    background-color:rgba(25, 39, 39, 0.8);
 }
