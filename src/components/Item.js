@@ -1,3 +1,5 @@
+import FlipMove from "react-flip-move";
+
 const Item = (props) => {
   const Task = props.tasks.map((task) => (
     <li key={task.id} id={task.id} onClick={() => props.remove(task.id)}>
@@ -6,7 +8,11 @@ const Item = (props) => {
       </p>
     </li>
   ));
-  return Task;
+  return (
+    <FlipMove duration={250} easing="ease-out">
+      {Task}
+    </FlipMove>
+  );
 };
 
 export default Item;
