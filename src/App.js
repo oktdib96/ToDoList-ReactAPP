@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TasksList from "./components/TasksList";
 import Header from "./components/Header";
 import "./css/App.css";
+import { StyledButton } from "./components/StyledButton";
 
 class App extends Component {
   state = {
@@ -17,6 +18,8 @@ class App extends Component {
       <div className="app">
         <Header />
         <TasksList />
+        <StyledButton>Dodaj zadanie</StyledButton>
+        <StyledButton primary>Usuń wszystko</StyledButton>
       </div>
     );
   }
