@@ -7,7 +7,11 @@ import { StyledButton } from "./components/StyledButton";
 class App extends Component {
   state = {
     tasks: [
-      { id: 1, text: "Zadanie1", date: "01.01.2023" },
+      {
+        id: 1,
+        text: "Zadanie1fdsdf  fdfsdfd fdsadasd sdadsadas",
+        date: "01.01.2023",
+      },
       { id: 2, text: "Zadanie2", date: "01.01.2023" },
       { id: 3, text: "Zadanie3", date: "01.01.2023" },
     ],
