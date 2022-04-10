@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TasksList from "./components/TasksList";
 import Header from "./components/Header";
+import "./css/App.css";
+
 class App extends Component {
   state = {
     tasks: [
@@ -12,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="app">
         <Header />
         <TasksList />
       </div>

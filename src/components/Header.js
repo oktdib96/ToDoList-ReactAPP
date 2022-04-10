@@ -1,7 +1,9 @@
+import "../css/Header.css";
+
 const Header = () => {
   return (
     <div className="header">
-      <h1>ToDoList --- Lista zadań</h1>
+      <h1>ToDoList</h1>
     </div>
   );
 };
