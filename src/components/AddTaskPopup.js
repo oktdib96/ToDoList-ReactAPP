@@ -8,6 +8,7 @@ const AddTaskPopup = (props) => {
       <form onSubmit={props.submit}>
         <label>Treść zadania:</label>
         <input
+          value={props.text}
           type="text"
           placeholder="wpisz zadanie..."
           required={true}
@@ -16,6 +17,7 @@ const AddTaskPopup = (props) => {
         />
         <label>Do kiedy należy zrobić</label>
         <input
+          value={props.date}
           type="date"
           required={true}
           name="date"

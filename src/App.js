@@ -76,6 +76,8 @@ class App extends Component {
         </div>
         {this.state.active ? (
           <AddTaskPopup
+            text={this.state.text}
+            date={this.state.date}
             data={this.state.tasks}
             popup={this.handleShowPopup}
             newTask={this.handleNewTask}
