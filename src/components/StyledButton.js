@@ -16,4 +16,14 @@ export const StyledButton = styled.button`
     padding: 5px 30px;
     background-color: rgba(254, 255, 255, 0);
   }
+  @media (max-width: 600px) {
+    left: 50%;
+    ${(props) => (props.primary ? "bottom: 2%" : "bottom: 15%")};
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    padding: 10px 30px;
+    &:hover {
+      padding: 10px 40px;
+    }
+  }
 `;

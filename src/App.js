@@ -13,7 +13,7 @@ class App extends Component {
     tasks: [
       {
         id: 1,
-        text: "Zadanie1fdsdf  fdfsdfd fdsadasd sdadsadas",
+        text: "Zadanie1fdsdf",
         date: "2024-02-04",
       },
       { id: 2, text: "Zadanie2", date: "2023-01-01" },
